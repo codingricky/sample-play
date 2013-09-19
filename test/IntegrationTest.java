@@ -21,6 +21,7 @@ public class IntegrationTest {
             public void invoke(TestBrowser browser) {
                 browser.goTo("http://localhost:3333");
                 assertThat(browser.pageSource()).contains("Your new application is ready.");
+                browser.takeScreenShot("/tmp/screenshot.jpg");
             }
         });
     }
